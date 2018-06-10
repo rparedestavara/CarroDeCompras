@@ -5,7 +5,30 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  	 <nav>
+          <ul>
+              <a href="/"><li>Home</li></a>
+              <a href="/productos/catalogo"><li>Catalogo</li></a>
+              <a href="/registro"><li>Registro</li></a>
+              <a href="/login"><li>Login</li></a>
+          </ul>
+      </nav>
     <h1>Catalogo de productos</h1>
-    <p>Welcome to <%= subtitle %></p>
+    <p>Welcome to </p>
+    <%= JSON.stringify(productos); %>
+    <table>
+      <tr>
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>COSTO</td>
+      </tr>
+      <% for(var i=0 ; i < 4; i++){ %>
+        <tr>
+              <td><%= productos[i].nombre_producto %></td>
+              <td><%= productos[i].nombre_producto %></td>
+              <td><%= productos[i].costo_producto %></td>
+        </tr>
+      <% } %>
+    </table>
   </body>
 </html>

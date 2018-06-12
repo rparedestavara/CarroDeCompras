@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>registrado</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-  	 <nav>
 
+          <% if(resultado[0].lenght == 0) { %>
+              <p>error ya esta registrado</p>
+
+          <% }; %>
+     <nav>
+         
           <ul>
               <a href="/"><li>Home</li></a>
               <a href="/productos/catalogo"><li>Catalogo</li></a>

@@ -10,8 +10,7 @@ var usersRouter = require('./routes/users');
 var productosRouter = require('./routes/productos');
 /****************REQUIRE****************************/
 
-var loginRouter=require('./routes/login');
-var registroRouter=require('./routes/registro');
+var usuariosRouter=require('./routes/usuarios');
 /********************************************/
 var app = express();
 
@@ -31,8 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productos', productosRouter);
 /***************USE*****************************/
-app.use('/login',loginRouter);
-app.use('/registro',registroRouter);
+app.use('/usuarios',usuariosRouter);
 
 /********************************************/
 

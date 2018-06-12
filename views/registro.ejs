@@ -5,20 +5,23 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    
+
   	 <nav>
           <ul>
               <a href="/"><li>Home</li></a>
               <a href="/productos/catalogo"><li>Catalogo</li></a>
-              <a href="/registro"><li>Registro</li></a>
-              <a href="/login"><li>Login</li></a>
+              <a href="/usuarios/registro"><li>Registro</li></a>
+              <a href="/usuarios/login"><li>Login</li></a>
           </ul>
       </nav>
     <h1>Catalogo de productos</h1>
     <p>Welcome to</p>
     <p>Registro</p>
-    <form method="POST" >
-      <li>usuario <input type="text" name=""></li>
-      <li>contraseña <input type="password" name=""></li>
+    <form method="post" action="/usuarios/registrarUsuario" >
+      <li>usuario <input type="text" name="usuario"></li>
+      <li>contraseña <input type="password" name="pass"></li>
+      <li><input type="submit" value="enviar"></li>
     </form>
   </body>
 </html>

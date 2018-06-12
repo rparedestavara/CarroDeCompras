@@ -1,8 +1,8 @@
 'use strict';
 var db = require("../bin/mysql");
 module.exports =  class Productos_models{
-    getProducto(productos_id,callback){
-        var query = db.query('SELECT * FROM productos', [productos_id],callback);
+    getProducto(usuario,callback){
+        var query = db.query('SELECT * FROM productos', usuario,callback);
     };
 
     getMisProductos(callback){

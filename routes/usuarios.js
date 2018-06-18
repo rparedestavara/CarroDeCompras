@@ -20,24 +20,10 @@ router.get('/registro',function(req,res,next){
 
 /*registrar usuario*/
 router.post('/registrarUsuario',function(req,res,next){
-	/*console.log( req.body['usuario'] );*/
-	/*console.log( req.body.usuario);*/
-	usuarios_registrados.getUsuario(req.body.usuario, function(error, result){
-    if(error){
-       throw error;
-    }else{
-       var resultado = result;
-       console.log(result);
-       if(resultado.length > 0){
-          res.render('registro_exitoso',{resultado:resultado});
- 
-       }else{
-          res.render('registro',{resultado:resultado});
-       }
-    }
- });
-
-
+var usuario; 
+ usuarios_registrados.getUsuario(req.body.usuario,req.body.pass).then((resultado) => { 
+         console.log("esta vacio : ");
+  })
 });
 
 module.exports = router;
